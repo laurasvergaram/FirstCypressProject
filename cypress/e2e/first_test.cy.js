@@ -1,10 +1,22 @@
-describe('empty spec', () => {
-  it('passes', () => {
-    cy.visit('https://www.demoblaze.com/')
-    cy.get('#login2').click()
-    cy.get('#loginusername').type('user232')
-    cy.get('#loginpassword').type('password')
-    cy.get('#logInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
+describe('clases', () => {
+  it('it works', () => {
+
+    // cy.request('GET','https://pokeapi.co/api/v2/pokemon/pikachu')
+    cy.request(
+      {
+        url:'https://petstore.swagger.io/v2/13',
+        method: 'DELETE',
+        headers:{api_key:1000},
+        failOnStatusCode: false,
+      }
+    )
+
+
+    // cy.visit('https://www.demoblaze.com/')
+    // cy.get('#login2').click()
+    // cy.get('#loginusername').type('user232')
+    // cy.get('#loginpassword').type('password')
+    // cy.get('#logInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
     // cy.get('#nameofuser').should('have.text','Welcome user232')
 
     // TIENE 4 ELEMENTOS EN ESE GRUPO
